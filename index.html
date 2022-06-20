@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Library</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</style>
+        <script src="library.js" defer></script>
+    </head>
+    <body>
+        <h1>Welcome to the Library! 📘</h1>
+        <div class="library">
+            <div class="bookcards">
+            </div>
+            <button type="button" class="add-button">+ Add a book</button>
+        </div>
+        <!-- modal-->
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-title">Add a Book</div>
+                <form class="modal-form">
+                    <label for="author-label">Author:</label><br>
+                    <input type="text" id="author-label" name="author-label" class="text-input"><br>
+                    <label for="title-label">Title:</label><br>
+                    <input type="text" id="title-label" name="title-label" class="text-input"><br>
+                    <label for="number-of-pages-label">Number of Pages:</label><br>
+                    <input type="text" id="number-of-pages-label" name="number-of-pages-label" class="text-input"><br>
+                    <label for="read-status-label">Have you read the book?</label>
+                    <input type="checkbox" id="read-status-label" name="read-status-label"><br><br>
+                    <input type="submit" value="Submit" class="submit-input">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
