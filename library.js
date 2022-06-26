@@ -4,13 +4,26 @@ let span = document.getElementsByClassName('close')[0]
 let addBtn = document.getElementsByClassName('add-button')[0];
 let submitBtn = document.getElementsByClassName('submit-input')[0];
 
-function Book(author, title, pages, read){
-  this.author = author;
-  this.title = title;
-  this.pages = pages;
-  this.read = read;
-  this.toggleRead = function(readValue){
-    this.read = !readValue;
+// function Book(author, title, pages, read){
+//   this.author = author;
+//   this.title = title;
+//   this.pages = pages;
+//   this.read = read;
+//   this.toggleRead = function(readValue){
+//     this.read = !readValue;
+//   }
+// }
+
+class Book {
+  constructor(author, title, pages, read){
+    this.author = author;
+    this.title = title;
+    this.pages = pages;
+    this.read = read;
+  }
+
+  toggleRead() {
+    this.read = !this.read;
   }
 }
 
@@ -65,7 +78,7 @@ function displayBooks() {
     readStatusBtn.classList.add('read-status-button');
     readStatusBtn.textContent = 'Mark ' + readStatusCheck(book.read);
     readStatusBtn.addEventListener('click', () => {
-      book.toggleRead(book.read)
+      book.toggleRead()
       displayBooks();
     });
     buttons.appendChild(readStatusBtn);
